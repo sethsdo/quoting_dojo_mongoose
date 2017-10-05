@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>test</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+    <body>
+        <div class="container">
+            <h1>Here are some awesome quotes!</h1>
+
+            <div>
+            
+                <% for (let quote of quotes) { %>
+                    <hr>
+                    <div>
+                        <h5><%= quote.quote %></h5>
+                        <br>
+                        <h5 style="text-align: center"><%= quote.name %> <%= quote.createdAt %></h5>
+                    </div>
+                <% } %>
+                <a href="/back" class="btn btn-default">Add New Quote</a>
+            </div>
+        </div>
+    </body>
+</html>
