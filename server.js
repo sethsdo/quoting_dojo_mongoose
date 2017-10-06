@@ -3,6 +3,7 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
+const moment = require('moment');
 const bodyParser = require('body-parser');
 const path = require('path');
 mongoose.connect('mongodb://localhost/quotes_mongoose');
@@ -58,6 +59,7 @@ app.get('/quotes', function (req, res) {
         console.log(quotes)
         const context = {
             "quotes": quotes,
+            "moment": moment,
         }
         res.render('quotes', context);
     });

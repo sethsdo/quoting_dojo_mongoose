@@ -19,7 +19,7 @@
                     <div>
                         <h5><%= quote.quote %></h5>
                         <br>
-                        <h5 style="text-align: center"><%= quote.name %> <%= quote.createdAt %></h5>
+                        <h5 style="text-align: center"><%= quote.name %> <%= moment(quote.createdAt).format('LLLL') %></h5>
                     </div>
                 <% } %>
                 <a href="/back" class="btn btn-default">Add New Quote</a>
